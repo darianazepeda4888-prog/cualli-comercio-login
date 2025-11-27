@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar Contraseña - CUALLI COMERCIO</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- CSS --- (Mismos estilos) */
+        :root {
+            --primary-color: #388E3C;
+            --secondary-color: #2E7D32;
+            --text-color: #333;
+            --background-color: #E8F5E9;
+            --card-background: #DCEDC8;
+            --border-color: #A5D6A7;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--background-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .recovery-card {
+            background-color: var(--card-background);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(46, 125, 50, 0.2);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .company-name {
+            font-size: 1.8em;
+            font-weight: 700;
+            color: var(--secondary-color);
+            margin-bottom: 5px;
+        }
+
+        .instruction-text {
+            font-size: 1em;
+            color: var(--secondary-color);
+            opacity: 0.8;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.9em;
+            color: var(--text-color);
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 1em;
+            box-sizing: border-box;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .form-group input:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(56, 142, 60, 0.25);
+            outline: none;
+        }
+
+        .recovery-button {
+            width: 100%;
+            padding: 15px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.1s;
+            margin-top: 10px;
+        }
+
+        .recovery-button:hover {
+            background-color: #2E7D32;
+        }
+        
+        .recovery-button:active {
+            transform: translateY(1px);
+        }
+
+        .back-to-login a {
+            font-size: 0.9em;
+            color: var(--secondary-color);
+            text-decoration: none;
+            display: block;
+            margin-top: 25px;
+            transition: color 0.3s;
+        }
+
+        .back-to-login a:hover {
+            text-decoration: underline;
+            color: #1B5E20;
+        }
+    </style>
+</head>
+<body>
+    <div class="recovery-card">
+        <div class="header">
+            <p class="company-name">CUALLI COMERCIO</p>
+            <p class="instruction-text">Ingresa tu correo para recibir un enlace de recuperación.</p>
+        </div>
+        
+        <form action="mensaje_enviado.html" method="GET">
+            <div class="form-group">
+                <label for="email">Correo Electrónico</label>
+                <input type="email" id="email" name="email_recuperacion" placeholder="ejemplo@cualli.com" required>
+            </div>
+            
+            <button type="submit" class="recovery-button">Enviar Enlace</button>
+        </form>
+        
+        <div class="back-to-login">
+            <a href="index.html">← Volver al inicio de sesión</a>
+        </div>
+    </div>
+</body>
+</html>
